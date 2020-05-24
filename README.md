@@ -4,7 +4,7 @@
 ## meeting紀錄
 ### https://hackmd.io/1QbUa7k-TF6oVKuelIhmjw?both
 
-### Setting
+### Install
 ```
    git clone https://github.com/enewen0324/Database_project.git --branch master
    cd Database_project
