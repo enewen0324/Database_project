@@ -5,18 +5,18 @@
 ### https://hackmd.io/1QbUa7k-TF6oVKuelIhmjw?both
 
 ### Setting
-#####   git clone https://github.com/enewen0324/Database_project.git --branch master
-#####   cd Database_project
-#####   git submodule update --init
-#####   cd laradock/
-#####   cp env-example .env
+-   git clone https://github.com/enewen0324/Database_project.git --branch master
+-   cd Database_project
+-   git submodule update --init
+-   cd laradock/
+-   cp env-example .env
 
 ### start laradock
-#####   docker-compose up -d nginx mysql workspace php-fpm
-#####   docker-compose exec --user=laradock workspace bash
-#####   composer install
-#####   yarn
-#####   cp .env.example .env
+-   docker-compose up -d nginx mysql workspace php-fpm
+-   docker-compose exec --user=laradock workspace bash
+-   composer install
+-   yarn
+-   cp .env.example .env
 
 ### generate key
-#####   php artisan key:generate
+-   php artisan key:generate
