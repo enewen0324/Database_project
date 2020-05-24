@@ -29,4 +29,10 @@
 ### Generate key
 ```
    php artisan key:generate
+   (Then you can use exit command to exit workspace)
+```
+
+### Important
+```
+    you may need to modify .env file for your environment
 ```
