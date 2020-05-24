@@ -8,12 +8,16 @@
 ```
    git clone https://github.com/enewen0324/Database_project.git --branch master
    cd Database_project
+```
+
+### Init submodule
+```
    git submodule update --init
    cd laradock/
    cp env-example .env
 ```
 
-### start laradock
+### Start laradock
 ```
    docker-compose up -d nginx mysql workspace php-fpm
    docker-compose exec --user=laradock workspace bash
@@ -22,7 +26,7 @@
    cp .env.example .env
 ```
 
-### generate key
+### Generate key
 ```
    php artisan key:generate
 ```
