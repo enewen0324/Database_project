@@ -8,7 +8,9 @@
 - PHP 7.2+
 - Docker
 - Docker-compose
+- Composer
 - Laravel
+- Yarn
 
 ### Install
 ```
