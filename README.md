@@ -4,6 +4,12 @@
 ## meeting紀錄
 ### https://hackmd.io/1QbUa7k-TF6oVKuelIhmjw?both
 
+### Required
+- PHP 7.2+
+- Docker
+- Docker-compose
+- Laravel
+
 ### Install
 ```
    git clone https://github.com/enewen0324/Database_project.git --branch master
