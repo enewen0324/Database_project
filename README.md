@@ -14,7 +14,7 @@
 
 ### Install
 ```
-   git clone https://github.com/enewen0324/Database_project.git --branch master
+   git clone https://github.com/enewen0324/Database_project.git --branch dev
    cd Database_project
 ```
 
