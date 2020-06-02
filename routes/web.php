@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::permanentRedirect("/", "/index");
+
+Route::get("/index", "navbarShowController@showIndex");
+
+Route::get("/customizedSearch", "navbarShowController@showCustomizedSearch");
+
+Route::get("/etiquette", "navbarShowController@showEtiquette");
