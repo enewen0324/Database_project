@@ -24,10 +24,10 @@
                         <a class="nav-link" href="#"> 最新消息 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> 禮儀社 </a>
+                        <a class="nav-link" href="/etiquette/all"> 禮儀社 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> 殯儀館 </a>
+                        <a class="nav-link" href="/undertaker/all"> 殯儀館 </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> 火化場 </a>

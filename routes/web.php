@@ -19,4 +19,6 @@ Route::get("/index", "navbarShowController@showIndex");
 
 Route::get("/customizedSearch", "navbarShowController@showCustomizedSearch");
 
-Route::get("/etiquette", "navbarShowController@showEtiquette");
+Route::get("/etiquette/{city_name}", "navbarShowController@showEtiquette");
+
+Route::get("/undertaker/{city_name}", "navbarShowController@showUndertaker");
