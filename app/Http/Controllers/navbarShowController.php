@@ -56,9 +56,9 @@ class navbarShowController extends Controller
             $sql = str_replace("%replace_later%", $city_id, $sql);
             $etiquette_data = DB::select($sql);
         }
-        // return view("test", [
-        //     'variable' => $etiquette_data
-        // ]);
+        return view("test", [
+            'variable' => $etiquette_data
+        ]);
         // {{$variable[0]->phone}}
     }
 
