@@ -27,5 +27,7 @@ Route::get("/fireplace/{city_name}", "navbarShowController@showFireplace");
 
 Route::get("/pagoda/{city_name}", "navbarShowController@showPagoda");
 
+Route::get("/greenburial/{city_name}", "navbarShowController@showGreenburial");
+
 Route::post("/customizedSearch/result", "searchResultController@result")
         ->name("customizedSearch.result");

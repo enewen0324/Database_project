@@ -56,7 +56,7 @@ class navbarShowController extends Controller
             $sql = str_replace("%replace_later%", $city_id, $sql);
             $etiquette_data = DB::select($sql);
         }
-        return view("test", [
+        return view("etiquette", [
             'variable' => $etiquette_data
         ]);
         // {{$variable[0]->phone}}
@@ -232,6 +232,27 @@ class navbarShowController extends Controller
         }
         return view("pagoda", [
             'variable' => $pagoda_data
+        ]);
+    }
+
+    public function showGreenburial($city_name) {
+        if ($city_name == "all") {
+            $sql = "SELECT
+                        gb.name,
+                        gb.type,
+                        gb.address,
+                        gb.phone,
+                        gb.fee
+                    FROM
+                        green_burial_with_fee as gb";
+            $green_burial_data = DB::select($sql);
+        }
+        else {
+            $green_burial_data = NULL;
+        }
+        
+        return view("greenburial", [
+            'variable' => $green_burial_data
         ]);
     }
 }
