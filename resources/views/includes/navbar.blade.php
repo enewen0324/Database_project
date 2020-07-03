@@ -33,7 +33,7 @@
                         <a class="nav-link" href="/fireplace/all"> 火化場 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> 墓園寶塔 </a>
+                        <a class="nav-link" href="/pagoda/all"> 墓園寶塔 </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> 生前契約 </a>

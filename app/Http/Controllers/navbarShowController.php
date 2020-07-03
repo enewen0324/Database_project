@@ -176,4 +176,62 @@ class navbarShowController extends Controller
             'variable' => $fireplace_data
         ]);
     }
+    
+    public function showPagoda($city_name) {
+        if ($city_name == "all") {
+            $sql = "SELECT
+                        cit.city_name,
+                        cit.area,
+                        cem.facility_name,
+                        cem.facility_class,
+                        cem.facility_type,
+                        cem.phone,
+                        cem.fax,
+                        cem.url,
+                        cem.email,
+                        cem.address
+                    FROM
+                        cities AS cit,
+                        cemetery AS cem
+                    WHERE
+                        cit.id = cem.city_id
+                        AND cem.facility_type = '骨灰(骸)存放設施'";
+            $pagoda_data = DB::select($sql);
+        }
+        else {
+            $sql = "SELECT
+                        id
+                    FROM
+                        cities
+                    WHERE
+                        city_name = '%replace_later%'";
+            $sql = str_replace("%replace_later%", $city_name, $sql);
+            $city_id = DB::select($sql)[0]->id;
+
+            $sql = "SELECT
+                        cit.city_name,
+                        cit.area,
+                        cem.facility_name,
+                        cem.facility_class,
+                        cem.facility_type,
+                        cem.phone,
+                        cem.fax,
+                        cem.url,
+                        cem.email,
+                        cem.address
+                    FROM
+                        cities AS cit,
+                        cemetery AS cem
+                    WHERE
+                        cit.id = %replace_later%
+                        AND cem.city_id = %replace_later%
+                        AND cit.id = cem.city_id
+                        AND cem.facility_type = '骨灰(骸)存放設施'";
+            $sql = str_replace("%replace_later%", $city_id, $sql);
+            $pagoda_data = DB::select($sql);
+        }
+        return view("pagoda", [
+            'variable' => $pagoda_data
+        ]);
+    }
 }
