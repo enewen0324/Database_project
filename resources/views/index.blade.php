@@ -8,7 +8,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> DB_project </title>
+        <title> Index </title>
     </head>
     <body>
         @include('includes.navbar')
