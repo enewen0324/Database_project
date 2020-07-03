@@ -7,7 +7,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Undertaker </title>
+        <title> Fireplace </title>
     </head>
     <body>
         @include('includes.navbar')
@@ -27,6 +27,10 @@
         display: flex;
         align-items: center;
     }
+    tr{
+        width: 100%;
+        /* border: solid; */
+    }
     tr:nth-child(even){
         background-color: lightgrey;
     }
@@ -36,11 +40,13 @@
         text-align: center;
         background-color: white;
         border-collapse: collapse;
+        margin-bottom: 50px;
+        width: 100%;
     }
     table, td{
         border: solid, black;
     }
-    .undertakerTitle{
+    .fireplaceTitle{
         display: flex;
         font-family: monospace;
         font-size: 25px;
@@ -49,34 +55,37 @@
         height: 100px;
     }
     .titleText{
+        font-family: STHeiti;
         height: 50%;
         width: 20%;
         border-bottom: solid 2px;
         display: flex;
         justify-content: center;
     }
-    .undertakerTable{
+    .fireplaceTable{
         display: flex;
         justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-    .undertakerName{
-        display: flex;
-        width: 25%;
-    }
-    .undertakerAddress{
+    .fireplaceName{
         display: flex;
         width: 30%;
     }
-    .undertakerPhone{
+    .fireplaceAddress{
         display: flex;
-        width: 25%;
+        width: 40%;
+    }
+    .fireplacePhone{
+        display: flex;
+        width: 30%;
     }
 </style>
 
-<div class="undertakerTitle">
+<div class="fireplaceTitle">
     <div class="titleText">合作火化場</div>
 </div>
-<div class="undertakerTable">
+<div class="fireplaceTable">
     <table>
         <tr>
             <th>名稱</th>
@@ -85,9 +94,9 @@
         </tr>
         @foreach($variable as $ele)
         <tr>
-            <td class="undertakerName"> {{$ele->facility_name}}</td>
-            <td class="undertakeAddress"> {{$ele->address}} </td>
-            <td class="undertakerPhone"> {{$ele->phone}}</td>
+            <td class="fireplaceName"> {{$ele->facility_name}}</td>
+            <td class="fireplaceAddress"> {{$ele->address}} </td>
+            <td class="fireplacePhone"> {{$ele->phone}}</td>
         </tr>
         @endforeach
     </table>

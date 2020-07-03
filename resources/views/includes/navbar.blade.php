@@ -2,6 +2,9 @@
     li {
         margin-left: 50px;
     }
+    .nav-link{
+        width: 30px;
+    }
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/index">
@@ -18,7 +21,7 @@
                     <a class="nav-link" href="/index">首頁<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/customizedSearch">  預定 / 查詢</a>
+                    <a class="nav-link" href="/customizedSearch"> 預定／查詢 </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"> 最新消息 </a>

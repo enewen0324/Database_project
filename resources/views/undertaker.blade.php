@@ -1,3 +1,5 @@
+
+
 <html>
     <head>
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
@@ -36,6 +38,7 @@
         text-align: center;
         background-color: white;
         border-collapse: collapse;
+        margin-bottom: 50px;
     }
     table, td{
         border: solid, black;
@@ -49,6 +52,7 @@
         height: 100px;
     }
     .titleText{
+        font-family: STHeiti;
         height: 50%;
         width: 20%;
         border-bottom: solid 2px;
@@ -58,6 +62,8 @@
     .undertakerTable{
         display: flex;
         justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .undertakerName{
         display: flex;
