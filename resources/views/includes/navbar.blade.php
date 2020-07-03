@@ -30,7 +30,7 @@
                         <a class="nav-link" href="/undertaker/all"> 殯儀館 </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> 火化場 </a>
+                        <a class="nav-link" href="/fireplace/all"> 火化場 </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> 墓園寶塔 </a>

@@ -23,5 +23,7 @@ Route::get("/etiquette/{city_name}", "navbarShowController@showEtiquette");
 
 Route::get("/undertaker/{city_name}", "navbarShowController@showUndertaker");
 
+Route::get("/fireplace/{city_name}", "navbarShowController@showFireplace");
+
 Route::post("/customizedSearch/result", "searchResultController@result")
         ->name("customizedSearch.result");
