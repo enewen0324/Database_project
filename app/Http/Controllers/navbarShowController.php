@@ -115,6 +115,8 @@ class navbarShowController extends Controller
             $sql = str_replace("%replace_later%", $city_id, $sql);
             $undertaker_data = DB::select($sql);
         }
-        return $undertaker_data;
+        return view("undertaker", [
+            'variable' => $undertaker_data
+        ]);
     }
 }
