@@ -71,7 +71,7 @@
                     </div>
                     <div class="form-group">
                         <label for="formControlRange"> 預算 </label>
-                        <input type="range" class="form-control-range" id="range_price" name="budget" value="10000" min="10000" max="100000" oninput="range_price_disp.value = range_price.value">
+                        <input type="range" class="form-control-range" id="range_price" name="budget" value="1000" min="1000" max="100000" oninput="range_price_disp.value = range_price.value">
                         <output id="range_price_disp"></output>
                     </div>
                     <button type="submit" class="btn btn-outline-secondary" id="submit_button"> 送出 </button>

@@ -62,6 +62,65 @@ class navbarShowController extends Controller
         // {{$variable[0]->phone}}
     }
 
+    public function showPulbicCem($city_name) {
+        if ($city_name == "all") {
+            $sql = "SELECT
+                        cit.city_name,
+                        cit.area,
+                        cem.id,
+                        cem.facility_name,
+                        cem.facility_class,
+                        cem.facility_type,
+                        cem.phone,
+                        cem.fax,
+                        cem.url,
+                        cem.email,
+                        cem.address
+                    FROM
+                        cities AS cit,
+                        cemetery AS cem
+                    WHERE
+                        cit.id = cem.city_id
+                        AND cem.facility_type = '公墓'";
+            $publicCem_data = DB::select($sql);
+        }
+        else {
+            $sql = "SELECT
+                        id
+                    FROM
+                        cities
+                    WHERE
+                        city_name = '%replace_later%'";
+            $sql = str_replace("%replace_later%", $city_name, $sql);
+            $city_id = DB::select($sql)[0]->id;
+
+            $sql = "SELECT
+                        cit.city_name,
+                        cit.area,
+                        cem.facility_name,
+                        cem.facility_class,
+                        cem.facility_type,
+                        cem.phone,
+                        cem.fax,
+                        cem.url,
+                        cem.email,
+                        cem.address
+                    FROM
+                        cities AS cit,
+                        cemetery AS cem
+                    WHERE
+                        cit.id = %replace_later%
+                        AND cem.city_id = %replace_later%
+                        AND cit.id = cem.city_id
+                        AND cem.facility_type = '公墓'";
+            $sql = str_replace("%replace_later%", $city_id, $sql);
+            $publicCem_data = DB::select($sql);
+        }
+        return view("publicCem", [
+            'variable' => $publicCem_data
+        ]);
+    }
+
     public function showUndertaker($city_name) {
         if ($city_name == "all") {
             $sql = "SELECT
@@ -120,6 +179,7 @@ class navbarShowController extends Controller
             'variable' => $undertaker_data
         ]);
     }
+
     public function showFireplace($city_name) {
         if ($city_name == "all") {
             $sql = "SELECT

@@ -56,10 +56,10 @@
                     <a class="nav-link" href="/customizedSearch"> 預定／查詢 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> 最新消息 </a>
+                    <a class="nav-link" href="/etiquette/all"> 禮儀社 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/etiquette/all"> 禮儀社 </a>
+                    <a class="nav-link" href="/public_cem/all"> 公墓 </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/undertaker/all"> 殯儀館 </a>

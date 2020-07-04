@@ -16,5 +16,6 @@ class searchResultController extends Controller
         $leave_type = $all_data["leave_type"];
         $budget = $all_data["budget"];
         
+        
     }
 }
