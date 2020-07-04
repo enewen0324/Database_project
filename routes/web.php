@@ -21,11 +21,17 @@ Route::get("/customizedSearch", "navbarShowController@showCustomizedSearch");
 
 Route::get("/etiquette/{city_name}", "navbarShowController@showEtiquette");
 
+Route::get("/public_cem/{city_name}", "navbarShowController@showPulbicCem");
+Route::get("/public_cem/id/{id}", "cemeteryidController@publicCemId");
+
 Route::get("/undertaker/{city_name}", "navbarShowController@showUndertaker");
+Route::get("/undertaker/id/{id}", "cemeteryidController@undertakerId");
 
 Route::get("/fireplace/{city_name}", "navbarShowController@showFireplace");
+Route::get("/fireplace/id/{id}", "cemeteryidController@fireplaceId");
 
 Route::get("/pagoda/{city_name}", "navbarShowController@showPagoda");
+Route::get("/pagoda/id/{id}", "cemeteryidController@pagodaId");
 
 Route::get("/greenburial/{city_name}", "navbarShowController@showGreenburial");
 
