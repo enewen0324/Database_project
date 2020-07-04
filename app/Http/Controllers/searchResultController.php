@@ -29,7 +29,6 @@ class searchResultController extends Controller
         $sql = "SELECT
                     cit.city_name,
                     cit.area,
-                    cem.id,
                     cem.facility_name,
                     cem.facility_class,
                     cem.facility_type,
@@ -51,7 +50,7 @@ class searchResultController extends Controller
         $sql = str_replace("%replace_leave_type%", $leave_type, $sql);
         $search_result_data = DB::select($sql);
 
-        return view("test", [
+        return view("customizedSearchResult", [
             "variable" => $search_result_data
         ]);
     }

@@ -77,7 +77,7 @@
                     <a class="nav-link" href="/greenburial/all"> 自然葬 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> F A Q </a>
+                    <a class="nav-link" href="/test"> 測驗 </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"> 聯絡我們 </a>

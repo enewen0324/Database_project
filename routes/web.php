@@ -37,3 +37,7 @@ Route::get("/greenburial/{city_name}", "navbarShowController@showGreenburial");
 
 Route::post("/customizedSearch/result", "searchResultController@result")
         ->name("customizedSearch.result");
+
+Route::get("/test", "testShowController@showTestSearch");
+Route::post("/testSearch/result", "testShowController@result")
+        ->name("testSearch.result");
