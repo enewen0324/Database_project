@@ -1,4 +1,3 @@
-{{dd($variable)}}
 
 <html>
     <head>
@@ -43,7 +42,7 @@
     table, td{
         border: solid, black;
     }
-    .undertakerTitle{
+    .publicCemTitle{
         display: flex;
         font-family: monospace;
         font-size: 25px;
@@ -59,41 +58,53 @@
         display: flex;
         justify-content: center;
     }
-    .undertakerTable{
+    .publicCemTable{
         display: flex;
         justify-content: center;
         margin-left: 10px;
         margin-right: 10px;
     }
-    .undertakerName{
+    .publicCemName{
         display: flex;
         width: 25%;
     }
-    .undertakerAddress{
+    .publicCemAddress{
         display: flex;
         width: 30%;
     }
-    .undertakerPhone{
+    .publicCemPhone{
         display: flex;
-        width: 25%;
+        width: 15%;
+    }
+    .publicCemFacility{
+        display: flex;
+        width: 10%;
+    }
+    .publicCemId{
+        color: black;
+    }
+    .publicCemId:hover{
+        text-decoration: none;
     }
 </style>
 
-<div class="undertakerTitle">
+<div class="publicCemTitle">
     <div class="titleText">合作公墓</div>
 </div>
-<div class="undertakerTable">
+<div class="publicCemTable">
     <table>
         <tr>
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr>
-            <td class="undertakerName"> {{$ele->facility_name}}</td>
+            <td class="publicCemName"> {{$ele->facility_name}}</td>
             <td class="undertakeAddress"> {{$ele->address}} </td>
-            <td class="undertakerPhone"> {{$ele->phone}}</td>
+            <td class="publicCemPhone"> {{$ele->phone}}</td>
+            <td class="publicCemFacility"><a class="publicCemId" href="/public_cem/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>

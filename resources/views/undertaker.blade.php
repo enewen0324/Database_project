@@ -104,7 +104,7 @@
         @foreach($variable as $ele)
         <tr>
             <td class="undertakerName"> {{$ele->facility_name}}</td>
-            <td class="undertakeAddress"> {{$ele->address}} </td>
+            <td class="undertakerAddress"> {{$ele->address}} </td>
             <td class="undertakerPhone"> {{$ele->phone}}</td>
             <td class="undertakerFacility"><a class="undertakerId" href="/undertaker/id/{{$ele->id}}">🔍</a></td>
         </tr>
