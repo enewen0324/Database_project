@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
@@ -78,7 +79,18 @@
     }
     .fireplacePhone{
         display: flex;
-        width: 30%;
+        width: 20%;
+    }
+    .fireplaceFacility{
+        display: flex;
+        width: 10%;
+    }
+    .fireplaceId{
+        color: black;
+    }
+    .fireplaceId:hover{
+        text-decoration: none;
+        color: red;
     }
 </style>
 
@@ -91,12 +103,14 @@
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr>
             <td class="fireplaceName"> {{$ele->facility_name}}</td>
             <td class="fireplaceAddress"> {{$ele->address}} </td>
             <td class="fireplacePhone"> {{$ele->phone}}</td>
+            <td class="fireplaceFacility"><a class="fireplaceId" href="/fireplace/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>

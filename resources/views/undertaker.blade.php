@@ -75,7 +75,18 @@
     }
     .undertakerPhone{
         display: flex;
-        width: 25%;
+        width: 15%;
+    }
+    .undertakerFacility{
+        display: flex;
+        width: 10%;
+    }
+    .undertakerId{
+        color: black;
+    }
+    .undertakerId:hover{
+        text-decoration: none;
+        color: red;
     }
 </style>
 
@@ -88,12 +99,14 @@
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr>
             <td class="undertakerName"> {{$ele->facility_name}}</td>
             <td class="undertakeAddress"> {{$ele->address}} </td>
             <td class="undertakerPhone"> {{$ele->phone}}</td>
+            <td class="undertakerFacility"><a class="undertakerId" href="/undertaker/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>

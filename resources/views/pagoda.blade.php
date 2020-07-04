@@ -73,7 +73,18 @@
     }
     .pagodaPhone{
         display: flex;
-        width: 25%;
+        width: 15%;
+    }
+    .pagodaFacility{
+        display: flex;
+        width: 10%;
+    }
+    .pagodaId{
+        color: black;
+    }
+    .pagodaId:hover{
+        text-decoration: none;
+        color: red;
     }
 </style>
 
@@ -86,12 +97,14 @@
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr>
             <td class="pagodaName"> {{$ele->facility_name}}</td>
             <td class="pagodaAddress"> {{$ele->address}} </td>
             <td class="pagodaPhone"> {{$ele->phone}}</td>
+            <td class="pagodaFacility"><a class="pagodaId" href="/pagoda/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>
