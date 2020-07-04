@@ -67,6 +67,7 @@ class navbarShowController extends Controller
             $sql = "SELECT
                         cit.city_name,
                         cit.area,
+                        cem.id,
                         cem.facility_name,
                         cem.facility_class,
                         cem.facility_type,
@@ -124,6 +125,7 @@ class navbarShowController extends Controller
             $sql = "SELECT
                         cit.city_name,
                         cit.area,
+                        cem.id,
                         cem.facility_name,
                         cem.facility_class,
                         cem.facility_type,
@@ -182,6 +184,7 @@ class navbarShowController extends Controller
             $sql = "SELECT
                         cit.city_name,
                         cit.area,
+                        cem.id,
                         cem.facility_name,
                         cem.facility_class,
                         cem.facility_type,
