@@ -18,7 +18,7 @@ class cemeteryidController extends Controller
         $sql = str_replace("%replace_later%", $id, $sql);
         $price_data = DB::select($sql);
 
-        return view("test", [
+        return view("publicCemId", [
             'variable' => $price_data
         ]);
     }
@@ -34,7 +34,7 @@ class cemeteryidController extends Controller
         $sql = str_replace("%replace_later%", $id, $sql);
         $price_data = DB::select($sql);
 
-        return view("test", [
+        return view("undertakerId", [
             'variable' => $price_data
         ]);
     }
@@ -50,7 +50,7 @@ class cemeteryidController extends Controller
         $sql = str_replace("%replace_later%", $id, $sql);
         $price_data = DB::select($sql);
 
-        return view("?", [
+        return view("fireplaceId", [
             'variable' => $price_data
         ]);
     }
@@ -66,7 +66,7 @@ class cemeteryidController extends Controller
         $sql = str_replace("%replace_later%", $id, $sql);
         $price_data = DB::select($sql);
 
-        return view("?", [
+        return view("pagodaId", [
             'variable' => $price_data
         ]);
     }
