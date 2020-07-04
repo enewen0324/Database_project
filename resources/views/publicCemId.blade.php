@@ -77,7 +77,7 @@
         margin-left: 10%;
     }
     .returnIcon:hover{
-        color: grey;
+        color: black;
         text-decoration: none;
         margin-bottom: 5px;
         border-bottom: solid;
@@ -98,8 +98,8 @@
 </style>
 
 <div class="publicCemIdIdTitle">
-    <div class="titleIcon"><a class="returnIcon" href="/public_cem/all">↩全部殯儀館</a></div>
-    <div class="titleText">設施服務</div>
+    <div class="titleIcon"><a class="returnIcon" href="/public_cem/all">↩回到公墓</a></div>
+    <div class="titleText">提供服務</div>
     <div class="titleRight"></div>
 </div>
 <div class="publicCemIdIdTable">
