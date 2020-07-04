@@ -45,6 +45,7 @@ class searchResultController extends Controller
                     AND cem.city_id = %replace_city_id%
                     AND cit.id = cem.city_id
                     AND cem.facility_type = %replace_leave_type%";
+                    
         $sql = str_replace("%replace_city_id%", $city_id, $sql);
         $leave_type = "'".$leave_type."'";
         $sql = str_replace("%replace_leave_type%", $leave_type, $sql);
