@@ -32,7 +32,7 @@
    composer install
    yarn
    cp .env.example .env
-   cp example.env .env
+   (cp example.env .env)
    (for Macos)
 ```
 

@@ -1,4 +1,3 @@
-{{dd($variable)}}
 
 <html>
     <head>
