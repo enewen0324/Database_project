@@ -25,9 +25,9 @@
         height: 80%;
         width: 50px;
     }
-    /* .dropdown:hover .navbar2 {
-        display: block;
-    } */
+    .btn{
+        margin-right: 10px;
+    }
 </style>
 
 <div class="dropdown">
