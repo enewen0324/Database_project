@@ -342,4 +342,8 @@ class navbarShowController extends Controller
             "variable" => $lifetime_contract_data
         ]);
     }
+
+    public function showCalender() {
+        return view("calender");
+    }
 }

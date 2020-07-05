@@ -80,7 +80,7 @@
                     <a class="nav-link" href="/test"> 測驗 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> 聯絡我們 </a>
+                    <a class="nav-link" href="/calender/search"> 農民曆查詢 </a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

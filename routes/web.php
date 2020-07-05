@@ -44,3 +44,7 @@ Route::post("/testSearch/result", "testShowController@result")
         ->name("testSearch.result");
 
 Route::get("/contract/{city_name}", "navbarShowController@showContract");
+
+Route::get("/calender/search", "navbarShowController@showCalender");
+Route::post("/calenderSearch/result", "calenderSearchController@result")
+        ->name("calenderSearch.result");
