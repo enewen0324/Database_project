@@ -27,6 +27,7 @@ class searchResultController extends Controller
         $city_id = DB::select($sql)[0]->id;
         
         $sql = "SELECT
+                    cem.id,
                     cit.city_name,
                     cit.area,
                     cem.facility_name,
