@@ -33,7 +33,7 @@
                     <div class="form-group row">
                         <label for="example-date-input" class="col-2 col-form-label"> 下葬日期 </label>
                         <div class="col-10">
-                            <input class="form-control" type="date" name="date" id="example-date-input" min="2020-01-01" max="2030-12-31" required>
+                            <input class="form-control" type="date" name="date" id="example-date-input" min="2020-01-01" max="2030-12-31" required>ex:2020/7/1</input>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-outline-secondary" id="submit_button"> 查詢 </button>

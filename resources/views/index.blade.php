@@ -14,3 +14,12 @@
         @include('includes.navbar')
     </body>
 </html>
+
+<style>
+
+</style>
+
+<div class="index">
+    
+
+</div>

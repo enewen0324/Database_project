@@ -79,7 +79,14 @@
     }
     .thirdEle{
         display: flex;
-        width: 30%;
+        width: 20%;
+    }
+    .fourthEle{
+        display: flex;
+        width: 10%;
+    }
+    .find:hover{
+        text-decoration: none;
     }
     .titleIcon{
         font-family: monospace;
@@ -123,7 +130,7 @@
     }
     .greenburialFee{
         display: flex;
-        width: 20%;
+        width: 10%;
     }
     .noresult{
         font-family: monospace;
@@ -152,12 +159,14 @@
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr class="content">
             <td class="firstEle"> {{$ele->facility_name}}</td>
             <td class="secondEle"> {{$ele->address}} </td>
             <td class="thirdEle"> {{$ele->phone}}</td>
+            <td class="fourthEle"><a class="find" href="/customizedSearch/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>
@@ -174,12 +183,14 @@
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr class="content">
             <td class="firstEle"> {{$ele->facility_name}}</td>
             <td class="secondEle"> {{$ele->address}} </td>
             <td class="thirdEle"> {{$ele->phone}}</td>
+            <td class="fourthEle"><a class="find" href="/customizedSearch/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>
@@ -196,12 +207,14 @@
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr class="content">
             <td class="firstEle"> {{$ele->facility_name}}</td>
             <td class="secondEle"> {{$ele->address}} </td>
             <td class="thirdEle"> {{$ele->phone}}</td>
+            <td class="fourthEle"><a class="find" href="/customizedSearch/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>
@@ -218,12 +231,14 @@
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr class="content">
             <td class="firstEle"> {{$ele->facility_name}}</td>
             <td class="secondEle"> {{$ele->address}} </td>
             <td class="thirdEle"> {{$ele->phone}}</td>
+            <td class="fourthEle"><a class="find" href="/customizedSearch/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>
@@ -242,6 +257,7 @@
             <th>聯絡地址</th>
             <th>聯絡電話</th>
             <th>價格</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr class="content">
@@ -250,6 +266,7 @@
             <td class="greenburialAddress"> {{$ele->address}}</td>
             <td class="greenburialPhone"> {{$ele->phone}}</td>
             <td class="greenburialFee"> {{$ele->fee}}</td>
+            <td class="fourthEle"><a class="find" href="/customizedSearch/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>
@@ -266,12 +283,14 @@
             <th>名稱</th>
             <th>聯絡地址</th>
             <th>聯絡電話</th>
+            <th></th>
         </tr>
         @foreach($variable as $ele)
         <tr class="content">
             <td class="firstEle"> {{$ele->facility_name}}</td>
             <td class="secondEle"> {{$ele->address}} </td>
             <td class="thirdEle"> {{$ele->phone}}</td>
+            <td class="fourthEle"><a class="find" href="/customizedSearch/id/{{$ele->id}}">🔍</a></td>
         </tr>
         @endforeach
     </table>
