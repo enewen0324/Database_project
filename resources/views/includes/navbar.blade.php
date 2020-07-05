@@ -71,7 +71,7 @@
                     <a class="nav-link" href="/pagoda/all"> 墓園寶塔 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> 生前契約 </a>
+                    <a class="nav-link" href="/contract/all"> 生前契約 </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/greenburial/all"> 自然葬 </a>

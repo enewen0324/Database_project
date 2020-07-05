@@ -318,4 +318,28 @@ class navbarShowController extends Controller
             'variable' => $green_burial_data
         ]);
     }
+
+    public function showContract($city_name) {
+        if ($city_name == "all") {
+            $sql = "SELECT
+                        cit.city_name,
+                        cit.area,
+                        lc.name,
+                        lc.guaranteebank,
+                        lc.address
+                    FROM
+                        cities AS cit,
+                        lifetime_contract as lc
+                    WHERE
+                        cit.id = lc.city_id";
+            $lifetime_contract_data = DB::select($sql);
+        }
+        else {
+            $lifetime_contract_data = NULL;
+        }
+
+        return view("contract", [
+            "variable" => $lifetime_contract_data
+        ]);
+    }
 }

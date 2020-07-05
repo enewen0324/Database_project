@@ -42,3 +42,5 @@ Route::get("/customizedSearch/id/{id}", "cemeteryidController@customizedSearchId
 Route::get("/test", "testShowController@showTestSearch");
 Route::post("/testSearch/result", "testShowController@result")
         ->name("testSearch.result");
+
+Route::get("/contract/{city_name}", "navbarShowController@showContract");
