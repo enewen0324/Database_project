@@ -94,11 +94,25 @@
     .publicCemIdIdPrice{
         width: 30%;
     }
+    .noresult{
+        font-family: monospace;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
     
 </style>
 
+@if (count($variable) === 0)
 <div class="publicCemIdIdTitle">
-    <div class="titleIcon"><a class="returnIcon" href="/pagoda/all">↩回到墓園/寶塔</a></div>
+    <div class="titleIcon"><a class="returnIcon" href="/pagoda/all">↩全部墓園/寶塔</a></div>
+    <div class="titleText">提供服務</div>
+    <div class="titleRight"></div>
+</div>
+<div class="noresult">抱歉，查無結果</div>
+@else
+<div class="publicCemIdIdTitle">
+    <div class="titleIcon"><a class="returnIcon" href="/pagoda/all">↩全部墓園/寶塔</a></div>
     <div class="titleText">提供服務</div>
     <div class="titleRight"></div>
 </div>
@@ -116,3 +130,4 @@
         @endforeach
     </table>
 </div>
+@endif

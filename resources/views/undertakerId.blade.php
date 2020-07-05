@@ -94,11 +94,25 @@
     .undertakerIdPrice{
         width: 30%;
     }
+    .noresult{
+        font-family: monospace;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
     
 </style>
 
+@if (count($variable) === 0)
 <div class="undertakerIdTitle">
-    <div class="titleIcon"><a class="returnIcon" href="/undertaker/all">↩回到殯儀館</a></div>
+    <div class="titleIcon"><a class="returnIcon" href="/undertaker/all">↩全部殯儀館</a></div>
+    <div class="titleText">提供服務</div>
+    <div class="titleRight"></div>
+</div>
+<div class="noresult">抱歉，查無結果</div>
+@else
+<div class="undertakerIdTitle">
+    <div class="titleIcon"><a class="returnIcon" href="/undertaker/all">↩全部殯儀館</a></div>
     <div class="titleText">提供服務</div>
     <div class="titleRight"></div>
 </div>
@@ -116,3 +130,4 @@
         @endforeach
     </table>
 </div>
+@endif

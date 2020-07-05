@@ -1,3 +1,4 @@
+{{dd($variable)}}
 
 <html>
     <head>
@@ -92,11 +93,11 @@
     }
     .returnIcon{
         width: 30%;
-        height: 80%;
+        height: 50%;
         color: black;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         margin-left: 10%;
     }
     .returnIcon:hover{
@@ -255,5 +256,25 @@
     </table>
 </div>
 @else
-    f
+<div class="Title">
+    <div class="titleIcon"><a class="returnIcon" href="/customizedSearch">↩回到預定/查詢</a></div>
+    <div class="titleText">查詢結果</div>
+    <div class="titleRight"></div>
+</div>
+<div class="mainTable">
+    <table>
+        <tr>
+            <th>名稱</th>
+            <th>聯絡地址</th>
+            <th>聯絡電話</th>
+        </tr>
+        @foreach($variable as $ele)
+        <tr class="content">
+            <td class="firstEle"> {{$ele->facility_name}}</td>
+            <td class="secondEle"> {{$ele->address}} </td>
+            <td class="thirdEle"> {{$ele->phone}}</td>
+        </tr>
+        @endforeach
+    </table>
+</div>
 @endif
