@@ -47,7 +47,7 @@
     }
 </style>
 
-<div class="dropdown">
+<div class="dropdown" id="navbar">
     <nav class="navbar1 navbar-expand-lg navbar-dark bg-dark">
         <span class="navbarBtn">⏏︎</span>
         <a class="navbar-brand" href="/index">
