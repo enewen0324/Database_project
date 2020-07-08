@@ -1,3 +1,5 @@
+
+
 <html>
     <head>
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
@@ -73,22 +75,67 @@
         flex-direction: column;
         margin-bottom: 20px;
     }
+    .tablerow{
+        width: 100%;
+        background: black;
+    }
+    .mainApt{
+        color: green;
+        width: 80%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainNotApt{
+        color: red;
+        width: 80%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainBadDead{
+        color: red;
+        width: 80%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .overral{
+        font-family: monospace;
+        font-size: 15px;
+        white-space:normal;
+        width: 5%;
+    }
     .mainrow{
         width: 80%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         height: 20%;
     }
+    
     .mainTime{
-        width: 30%;
+        width: 20%;
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+    .mainremind{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
     .mainContent{
         width: 30%;
         display: flex;
         flex-direction: column;
-        /* border: red solid; */
     }
     .mainGood{
         font-size: 15px;
@@ -104,7 +151,12 @@
         display: flex;
         align-items: center;
     }
-
+    .mainremindTrue{
+        color: green;
+    }
+    .mainremindFalse{
+        color: red;
+    }
 </style>
 
 @if (count($variable) === 0)
@@ -121,9 +173,45 @@
     <div class="titleRight"></div>
 </div>
 <div class="main">
+    <div class="tablerow"></div>
+    <div class="mainApt">
+    ✔︎宜下葬：
+    @foreach($variable as $ele)
+        @if($ele->apttime === 1)
+            <div class="overral">{{$ele->time}}</div>
+        @endif
+    @endforeach
+    </div>
+    <div class="mainNotApt">
+    ✘忌下葬：
+    @foreach($variable as $ele)
+        @if($ele->badtime === 1)
+        <div class="overral">{{$ele->time}}</div>
+        @endif
+    @endforeach
+    </div>
+    <div class="mainBadDead">
+    ✘忌出殯：
+    @foreach($variable as $ele)
+        @if($ele->badfordead === 1)
+        <div class="overral">{{$ele->time}}</div>
+        @endif
+    @endforeach
+    </div>
     @foreach($variable as $ele)
         <div class="mainrow">
             <div class="mainTime">{{$ele->time}}</div>
+            <div class="mainremind">
+                @if($ele->apttime === 1)
+                    <div class="mainremindTrue">✔︎宜下葬</div>
+                @endif
+                @if($ele->badtime === 1)
+                    <div class="mainremindFalse">✘忌下葬</div>
+                @endif
+                @if($ele->badfordead === 1)
+                    <div class="mainremindFalse">✘忌出殯</div>
+                @endif
+            </div>
             <div class="mainContent">
                 @if($ele->good === "none")
                     <div class="mainGood">宜：無</div>
